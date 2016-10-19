@@ -32,7 +32,6 @@ class FlaskDaemon:
         while True:
             
             self.data.append(i)
-            self.hello = str(i)
             i += 1
             sleep(1)
 
@@ -46,7 +45,7 @@ if __name__ == "__main__":
             sys.exit(0)
         with open("/tmp/flaskdaemon.pid", "r") as pidfile:
             pid = pidfile.read()
-        os.system('kill %s' % pid)
+        os.system('kill -9 %s' % pid)
 
     def foreground():
         FlaskDaemon().main()
