@@ -62,8 +62,8 @@ if __name__ == "__main__":
     elif sys.argv[1] == "stop":
         stop()
     elif sys.argv[1] == "restart":
-        start()
         stop()
+        start()
     elif sys.argv[1] == "foreground":
         foreground()
     else:
