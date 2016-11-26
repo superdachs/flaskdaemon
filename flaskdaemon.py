@@ -11,7 +11,7 @@ import os
 class FlaskDaemon:
 
     def __init__(self):
-        self.data = []
+        self.data = ["Hallo Welt", "Feld 2"]
 
     def main(self):
         
